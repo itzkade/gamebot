@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "#";
+var prefix = "$";
 client.on('سرعة', speed => {
-    if (speed.content == "#سرعة") {
+    if (speed.content == "$speed") {
         var x = ["DreamKing",
 "DeathGames",
 "زيرو كنج",
@@ -106,7 +106,7 @@ client.on('سرعة', speed => {
 })
 
 client.on('لغز', puz => {
-    if (puz.content == "#لغز") {
+    if (puz.content == "$puz") {
         var x = ["ما هي حاسة الشم عند الثعبان ؟",
 "ما هو الشي الذي يكسو الناس و هو عار بدون ملابس ؟",
 "ما هو الشي الذي لا يجري و لا يمشي ؟",
@@ -185,7 +185,7 @@ client.on('لغز', puz => {
 })
 
 client.on('فكك', fkk => {
-    if (fkk.content == "#فكك") {
+    if (fkk.content == "$fkk") {
         var x = ["المتاح للجميع لا يتاح لي",
 "خعاخع",
 "فيلا",
@@ -250,7 +250,7 @@ client.on('فكك', fkk => {
 })
 
 client.on('خمن', khmn => {
-    if (khmn.content == "#خمن") {
+    if (khmn.content == "$khmn") {
         var x = ["نيفر---- الموعودة",
 "فورت ----",
 "ماين -----",
