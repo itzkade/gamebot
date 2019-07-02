@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var prefix = "-";
-client.on('سرعة', message => {
-    if (message.content == "-سرعة") {
+client.on('سرعة', speed => {
+    if (speed.content == "-سرعة") {
         var x = ["DreamKing",
 "DeathGames",
 "زيرو كنج",
@@ -86,20 +86,20 @@ client.on('سرعة', message => {
         ];
         
         var x3 = Math.floor(Math.random()*x.length)
-        message.channel.send(` اول شخص يكتب :  __**${x[x3]}**__
+        speed.channel.send(` اول شخص يكتب :  __**${x[x3]}**__
 لديك 15 ثانية للاجابة`).then(msg1=> {
-            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+            var r = speed.channel.awaitMessages(msg => msg.content == x2[x3], {
                 maxMatches : 1,
                 time : 15000,
                 errors : ['time']
             })
         r.catch(() => {
-            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            return speed.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
             الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
         })
         
         r.then((collected)=> {
-            message.channel.send(`${collected.first().author} لقد قمت بكتابة الكلمة في الوقت المناسب  `);
+            speed.channel.send(`${collected.first().author} لقد قمت بكتابة الكلمة في الوقت المناسب  `);
         })
         })
     }
@@ -249,8 +249,8 @@ client.on('فكك', fkk => {
     }
 })
 
-client.on('خمن', fkk => {
-    if (fkk.content == "-خمن") {
+client.on('خمن', khmn => {
+    if (khmn.content == "-خمن") {
         var x = ["نيفر---- الموعودة",
 "فورت ----",
 "ماين -----",
@@ -295,20 +295,20 @@ client.on('خمن', fkk => {
         ];
         
         var x3 = Math.floor(Math.random()*x.length)
-        fkk.channel.send(`اول شخص يخمن :  __**${x[x3]}**__
+        khmn.channel.send(`اول شخص يخمن :  __**${x[x3]}**__
 لديك 15 ثانية للاجابة`).then(msg1=> {
-            var r = fkk.channel.awaitMessages(msg => msg.content == x2[x3], {
+            var r = khmn.channel.awaitMessages(msg => msg.content == x2[x3], {
                 maxMatches : 1,
                 time : 15000,
                 errors : ['time']
             })
         r.catch(() => {
-            return fkk.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            return khmn.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
             الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
         })
         
         r.then((collected)=> {
-            fkk.channel.send(`${collected.first().author} لقد قمت بتخمين الجملة في الوقت المناسب`);
+            khmn.channel.send(`${collected.first().author} لقد قمت بتخمين الجملة في الوقت المناسب`);
         })
         })
     }
